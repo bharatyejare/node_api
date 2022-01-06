@@ -42,7 +42,7 @@ app.post('/upload', upload.single("uploadfile"), (req, res) =>{
     
 });
 
-function UploadCsvDataToMySQL(filePath){
+function UploadCsvDataToMySQL(filePath) {
   let stream = fs.createReadStream(filePath);
   let csvData = [];
   let csvStream = fastcsv
