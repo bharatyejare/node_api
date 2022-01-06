@@ -66,7 +66,7 @@ function UploadCsvDataToMySQL(filePath) {
       "INSERT INTO students (name, age, mark_one,mark_two,mark_three,result_status) VALUES ?";
       db.query(query, [csvData], (error, response) => {
       console.log(error || response);
-      fs.unlinkSync(filePath);
+      //fs.unlinkSync(filePath);
     });
  
   });
